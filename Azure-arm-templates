@@ -1,0 +1,39 @@
+# Using Azure Resource Manager (ARM) Templates
+
+## Key Concept
+Every deployment in Azure—whether done manually via the Portal or automated—is 
+actually built on an ARM template behind the scenes.
+
+## Topics Covered
+
+### 1. Exporting a Deployment as a Template
+- Any existing deployment can be exported as an ARM template.
+- Exported templates can be customized and reused.
+
+### 2. Finding ARM Templates for Existing Deployments
+- Navigate to a **Resource Group** → **Deployments** section.
+- View the ARM template used for any past deployment.
+
+### 3. Creating a Custom ARM Template
+- Build templates directly in the Azure Portal.
+- Add resources step-by-step:
+  - Virtual Network
+  - Virtual Machine
+  - Storage Account
+- Azure Portal auto-manages **dependencies** and **variables** between resources.
+
+### 4. Deploying the Template
+- Specify deployment parameters:
+  - Resource Group
+  - Region
+  - VM Name
+  - Credentials
+- Deploy and confirm resources appear in the resource group.
+
+## Comparison Note (Terraform/AWS Background)
+- ARM Templates ≈ AWS CloudFormation (Azure-native, JSON-based)
+- Terraform ≈ cloud-agnostic (HCL-based, works across AWS/Azure/GCP)
+
+## Takeaway
+ARM templates are the **foundation of Azure resource management**, enabling 
+automated, repeatable infrastructure deployments.
